@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            display: inline-block;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        #photoContainer {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heyy babyy ❤️</h1>
+        <p>I love youuu Prarthana you look gorgeous i wanna wife youuu upp</p>
+        <button onclick="askToKnowBetter()">Yes! 💖</button>
+        <button id="noButton" onmouseover="convertToYes()">No 😢</button>
+        <p id="question" style="display:none; font-weight: bold; color: #ff4d4d;"></p>
+        <button id="secondYes" style="display:none;" onclick="showPhoto()">Yes! 💖</button>
+        <div id="photoContainer">
+            <p style="font-weight: bold; color: #ff4d4d;">prarz_only&only_mine</p>
+            <img src="https://i.imgur.com/tT1r1RV.jpeg" alt="Our Love" width="300" style="border-radius: 10px; box-shadow: 0px 0px 10px gray;">
+        </div>
+    </div>
+    <script>
+        function askToKnowBetter() {
+            document.getElementById("question").style.display = "block";
+            document.getElementById("question").innerText = "Do you want to know me better?";
+            document.getElementById("secondYes").style.display = "inline-block";
+        }
+        
+        function showPhoto() {
+            document.getElementById("photoContainer").style.display = "block";
+        }
+        
+        function convertToYes() {
+            let noButton = document.getElementById("noButton");
+            noButton.innerText = "Yes! 💖";
+            noButton.onclick = askToKnowBetter;
+        }
+    </script>
+</body>
+</html>
